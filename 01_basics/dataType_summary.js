@@ -40,6 +40,27 @@ const arrowFunction = () => {
   console.log("hello arrow");
 }
 
-console.log(myFunction())
-console.log(varFunction())
-console.log(arrowFunction())
+// console.log(myFunction())
+// console.log(varFunction())
+// console.log(arrowFunction())
+
+
+// --------------------------------------------------
+// Stack (Primitive), Heap(Non-Primitive)
+
+let mainColor = "red";
+let anotherColor = mainColor;
+anotherColor = "blue"
+
+
+console.log(mainColor, anotherColor)
+
+let userOneColor = {
+  color: "pink",
+  primaryColor: "silver"
+}
+let userTwoColor = userOneColor;
+userTwoColor.color = "yellow"
+
+console.log(userOneColor)
+console.log(userTwoColor)
