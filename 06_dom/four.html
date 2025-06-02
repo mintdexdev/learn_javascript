@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>four chai</title>
+</head>
+
+<body style="background-color: #121212; color: #ffffffde;">
+
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
+
+  <script>
+
+    function addLanguage(langName) {
+      const li = document.createElement('li');
+      li.innerText = `${langName}`;
+      document.querySelector('.language').appendChild(li);
+    }
+
+    function addOptimisedLanguage(langName) {
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector('.language').appendChild(li);
+    }
+
+    addLanguage('C++');
+    addLanguage('Python');
+
+    addOptimisedLanguage('Golang');
+
+    // replace element
+    const selectedLang = document.querySelector('li:nth-child(2)');
+    // selectedLang.innerHTML = "Typescript"
+    // newLi.textContent = "TypeScript"
+    const newLi = document.createElement('li');
+    newLi.appendChild(document.createTextNode("TypeScript"));
+    selectedLang.replaceWith(newLi);
+
+    const firstElement = document.querySelector('li:first-child');
+    firstElement.outerHTML = "<li> Changed JS </ li>"
+
+
+      //remove ELement
+      const lastLang = document.querySelector('li:last-child');
+      lastLang.remove();
+
+  </script>
+</body>
+
+</html>
