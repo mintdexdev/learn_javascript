@@ -3,6 +3,9 @@
 ## [promise](promise.js)
 promise is added to a `taskqueue`
 
+It is used to:\
+do async task, db calls, cryptography, network related
+
 ## fetch API
 
 ### [XMLHttpRequest](XML.html) 

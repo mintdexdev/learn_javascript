@@ -2,28 +2,25 @@
 // takes callback
 // reduce callback hell
 
-
-const promiseOne = new Promise(function (resolve, reject) {
-  // do async task
-  // db calls, cryptography, network
-  setTimeout(function () {
-    console.log('async task1 is completed');
-    resolve();
-  }, 1000);
-})
-promiseOne.then(function () {
-  console.log('promise1 consumed');
-})
-
-
-// promsieTwo direct 'then' used 
+// direct 'then' used 
 new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log('async task 2');
     resolve();
   }, 1000);
 }).then(function () {
-  console.log("Promise 2 ressolve")
+  console.log("Promise 1 resolved")
+})
+
+
+const promiseTwo = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    console.log('async task1 is completed');
+    resolve();
+  }, 1000);
+})
+promiseTwo.then(function () {
+  console.log('promise1 resolved');
 })
 
 
@@ -36,7 +33,6 @@ const promiseThree = new Promise(function (resolve, reject) {
 promiseThree.then(function (user) {
   console.log(user)
 })
-
 
 
 const promiseFour = new Promise(function (resolve, reject) {
@@ -55,6 +51,7 @@ promiseFour.then((user) => {
 }).then((username) => {
   console.log(username)
 }).catch((error) => {
+  // these is a response not an actual error
   console.log(error)
 }).finally(() => {
   console.log("promise is either resolved or rejected")
