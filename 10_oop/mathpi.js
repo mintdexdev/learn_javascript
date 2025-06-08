@@ -1,12 +1,12 @@
 // defineProperties
 
 const descripter = Object.getOwnPropertyDescriptor(Math, "PI");
-
 // console.log(descripter);
 // console.log(Math.PI = 5) // why 5 here? explained above
 Math.PI = 5;
 /* the result of the assignment expression not the actual value of Math.PI. */
 console.log(Math.PI)
+
 
 const fruit = {
   name: "apple",
