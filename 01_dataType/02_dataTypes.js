@@ -23,3 +23,24 @@ let isLoggedIn = false;
 
 console.log(typeof undefined) // undefined
 console.log(typeof null) //object
+
+// Number
+/* 
+decimal
+88 
+0888 -> 888
+
+Octal-
+0O755 -> 493
+0o644 -> 420
+legacy octal - 0644 -> 420
+
+binary - 
+0b10000000000000000000000000000000 -> 2147483648
+0b01111111100000000000000000000000 -> 2139095040
+0B00000000011111111111111111111111 -> 8388607
+
+hexadecimal-
+0xFFFFFFFFFFFFF -> 4503599627370495
+0XA             -> 10
+*/
