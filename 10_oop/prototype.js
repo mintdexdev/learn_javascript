@@ -35,7 +35,9 @@ Teacher.__proto__ = User;
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher);
 
-// console.log("User:", User)
+/* to make a new instact from a object use factory methods */
+const fall = Object.create(User);
+
 // console.log("Teacher:", Teacher, Teacher.name)
 // console.log("TeachingSupport:", TeachingSupport, TeachingSupport.makeVideo)
 // console.log("TASupport:", TASupport, TASupport.isAvailable)
