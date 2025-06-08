@@ -10,8 +10,10 @@ It only has object, prototype and sugar coating to replicate classes
 - Polymorphism
 
 ## Object
-- in javascript everything is an object
-- collection of properties and metods
+- in javascript everything is an object.
+- object is collection of properties and metods.\
+[code](object.js)
+![alt text](image.png)
 
 ## why use OOP
 to reduce spagiti code\
@@ -25,10 +27,8 @@ Object literal - {}
 - Classes
 - Instances (new, this)
 
-![alt text](image.png)
 
 ## importance of 'new' keyword
-[code](object.js)
 
 Here's what happens behind the scenes when the new keyword is used:
 
@@ -42,5 +42,10 @@ Here's what happens behind the scenes when the new keyword is used:
 
 
 ### code related image
-[call.js](call.js)
-![Call.js](image-1.png)
+scope of this
+![alt text](image-1.png)
+
+
+[about 'call'](inheritance.js)
+about bind\
+about apply

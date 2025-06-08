@@ -1,3 +1,11 @@
+// here this refers to  module.exports in common js
+// console.log(this)
+// console.log(module.exports)
+// (function () {
+//   console.log(this);
+//     (function () { console.log(this) })();
+// })();
+
 const user = {
   username: "starfall",
   getUserDetails: function () {
@@ -9,9 +17,6 @@ const user = {
 // console.log(user.username);
 // user.getUserDetails();
 
-// here this refers to  module.exports in common js
-// console.log(this)
-// console.log(module.exports)
 
 function User(username, isLoggedIn) {
   this.username = username;
