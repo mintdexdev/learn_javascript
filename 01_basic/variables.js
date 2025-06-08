@@ -1,26 +1,42 @@
-const accountID = 111;
-let accountEmail = "starfall@example.com";
-var accountPassword = "123"; // Prefer not to use
-accountCity = "city1"; // possible but not a good practice
-let accountState;
-
-// accountID = 122 // change is not allowed
-
-accountEmail = "foo@bar.com";
-accountPassword = "999";
-accountCity = "city2";
-
-console.log(accountID);
+/* const, let, var */
 
 /*
-Not to use var?
+Rules of naming of variable
+- unique names and case sensitive
+- contain letters, digits, _, and $.
+- begin with a letter, $ and _
+- Reserved words cannot be used.
+*/
+
+
+/* possible but not a good practice to use without variable keywords */
+city = "abcCity";
+
+/* declaration  */
+let a;
+var b; // modern JS: Prefer not to use 'var'
+const c = 3;
+/* assignment */
+a = 1;
+b = 2;
+// c = 4; change is not allowed
+
+/*
+don't use var
 Because of issue in block scope and functional scope.
 */
 
+
+/* example */
+let accountState;
+let accountEmail = "stellar@foo.bar";
+const accountID = 123;
+
+accountEmail = "factor@foo.bar";
+
+console.log(accountID);
 console.table([
-  accountID,
-  accountEmail,
-  accountPassword,
-  accountCity,
   accountState,
+  accountEmail,
+  accountID,
 ]);
