@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Closure</title>
+  <meta name="viewport" content="width=device-width, createUserial-scale=1.0">
+  <title>Closure and Lexical Scope</title>
 </head>
 
 <body>
@@ -14,48 +14,51 @@
 
   <script>
     /* Lexical Scoping 
-    child have parent properties method but not vice verso
+    child have parent properties method but not vice versa
     */
 
-    // function init() {
-    //   let name = "Mozilla";
-    //   function display() {
+    // function createUser() {
+    //   let name = "star";
+    //   function displayName() {
     //     console.log(name);
     //   }
     //   displayName();
     // }
-    // init();
+    // createUser();
 
-    /* Closure
-    
-    */
-    // function makeFunc() {
-    //   const name = "Mozilla";
-    //   function displayName() {
-    //     console.log(name);
-    //   }
-    //   return displayName;
-    // }
-    // const myFunc = makeFunc();
-    // myFunc();
 
+    /* Closure */
+
+    function createUser() {
+      const name = "star";          // used in closure
+      const email = "star@foo.bar"; // used in closure
+      const password = "Not used";  // not used is closure
+
+      function displayDetails() {
+        console.log(name,email); // only 'name, email' is used
+      }
+
+      return displayDetails;
+    }
+    const myFunc = createUser();
+    myFunc();
 
     /* try */
-    // function makeFunc() {
-    //   const name = "Mozilla";
+    // function createUser() {
+    //   const name = "star";
     //   function display() {
-    //     function displayName() {
+    //     function displayDetails() {
     //       console.log(name);
     //     }
-    //     return displayName;
+    //     return displayDetails;
     //   }
     //   return display;
     // }
-    // const myFunc = makeFunc();
+    // const myFunc = createUser();
     // const myFunc2 = myFunc();
     // myFunc2();
 
-    // const myFunc = makeFunc()();
+    // const myFunc = createUser()();
     // myFunc();
 
     // console.log(myFunc)
@@ -63,6 +66,7 @@
 
   </script>
   <script>
+    /* can do this but what if there is very larger array of colors */
     // document.getElementById("orange").onclick = function () {
     //   document.body.style.backgroundColor = `orange`
     // }
@@ -70,28 +74,30 @@
     //   document.body.style.backgroundColor = `green`
     // }
 
-    function clickHandler(color){
-    // document.body.style.backgroundColor = `${color}`
-      return function(){
-        document.body.style.backgroundColor = `${color}`
-      }
-    }
-    document.getElementById('orange').onclick = clickHandler("orange");
-    document.getElementById('green').onclick = clickHandler("green");
 
-    /* arrow function just like in react */
+    // function clickHandler(color){
+    // // document.body.style.backgroundColor = `${color}`
+    //   return function(){
+    //     document.body.style.backgroundColor = `${color}`
+    //   }
+    // }
+    // document.getElementById('orange').onclick = clickHandler("orange");
+    // document.getElementById('green').onclick = clickHandler("green");
+
+
     /* created button using array */
-    ["blue","red"].forEach((color) => {
-      const button = document.createElement('button');
-      button.setAttribute("id",`${color}`)
-      button.appendChild(document.createTextNode(`${color}`))
-      document.getElementById('green').insertAdjacentElement("afterend",button)
+    /* arrow function just like in react */
+    // ["blue","red"].forEach((color) => {
+    //   const button = document.createElement('button');
+    //   button.setAttribute("id",`${color}`)
+    //   button.appendChild(document.createTextNode(`${color}`))
+    //   document.getElementById('green').insertAdjacentElement("afterend",button)
 
-      document.getElementById(`${color}`).addEventListener('click', () =>{
-        document.body.style.backgroundColor = `${color}`
-      }
-      )
-    })
+    //   document.getElementById(`${color}`).addEventListener('click', () =>{
+    //     document.body.style.backgroundColor = `${color}`
+    //   }
+    //   )
+    // })
   </script>
 </body>
 
