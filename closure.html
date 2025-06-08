@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closure</title>
+</head>
+
+<body>
+  Example of Lexical Scope and Closure
+  <button id="orange">Orange</button>
+  <button id="green">Green</button>
+
+  <script>
+    /* Lexical Scoping 
+    child have parent properties method but not vice verso
+    */
+
+    // function init() {
+    //   let name = "Mozilla";
+    //   function display() {
+    //     console.log(name);
+    //   }
+    //   displayName();
+    // }
+    // init();
+
+    /* Closure
+    
+    */
+    // function makeFunc() {
+    //   const name = "Mozilla";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+    //   return displayName;
+    // }
+    // const myFunc = makeFunc();
+    // myFunc();
+
+
+    /* try */
+    // function makeFunc() {
+    //   const name = "Mozilla";
+    //   function display() {
+    //     function displayName() {
+    //       console.log(name);
+    //     }
+    //     return displayName;
+    //   }
+    //   return display;
+    // }
+    // const myFunc = makeFunc();
+    // const myFunc2 = myFunc();
+    // myFunc2();
+
+    // const myFunc = makeFunc()();
+    // myFunc();
+
+    // console.log(myFunc)
+    // console.log(myFunc2)
+
+  </script>
+  <script>
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color){
+    // document.body.style.backgroundColor = `${color}`
+      return function(){
+        document.body.style.backgroundColor = `${color}`
+      }
+    }
+    document.getElementById('orange').onclick = clickHandler("orange");
+    document.getElementById('green').onclick = clickHandler("green");
+
+    /* arrow function just like in react */
+    /* created button using array */
+    ["blue","red"].forEach((color) => {
+      const button = document.createElement('button');
+      button.setAttribute("id",`${color}`)
+      button.appendChild(document.createTextNode(`${color}`))
+      document.getElementById('green').insertAdjacentElement("afterend",button)
+
+      document.getElementById(`${color}`).addEventListener('click', () =>{
+        document.body.style.backgroundColor = `${color}`
+      }
+      )
+    })
+  </script>
+</body>
+
+</html>
