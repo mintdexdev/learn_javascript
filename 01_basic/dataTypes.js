@@ -1,5 +1,6 @@
 /*
-Primitive
+Primitive - Stack
+
 string: ""
 number: -(2^53-1) to (2^53-1)
 bigint : 123456789n: number range is increased
@@ -8,7 +9,7 @@ null: nothing, empty
 undefined : value not defined
 symbol : Symbol("foo") :: uniqueness
 
-Non Primiive
+Non Primiive - Heap
 object: Array, Object, Function
 */
 
@@ -18,30 +19,6 @@ let isLoggedIn = false;
 
 // console.log(typeof undefined) // undefined
 // console.log(typeof null) //object
-
-/* 
-Number
-
-decimal-
-888, 0888 is 888
-
-Octal-
-octal -> decimal
-0o644 -> 420
-0O755 -> 493
-legacy octal - 0644 -> 420
-
-binary - 
-binary -> decimal
-0b01111111100000000000000000000000 -> 2139095040
-0B00000000011111111111111111111111 -> 8388607
-
-hexadecimal-
-hexadecimal -> decimal
-0xFFFFFFFFFFFFF -> 4503599627370495
-0XA             -> 10
-*/
-
 
 
 /*  REVISION */
@@ -83,3 +60,23 @@ const myFunction = function () {
 // console.log(typeof colors)
 // console.log(typeof obj)
 // console.log(typeof myFunction)
+
+
+
+/* stack heap example */
+
+/* copy */
+let mainColor = "red";
+let anotherColor = mainColor;
+anotherColor = "blue"
+// console.log(mainColor, anotherColor)
+
+/* reference */
+let userOneColor = {
+  color: "pink",
+  primaryColor: "silver"
+}
+let userTwoColor = userOneColor;
+userTwoColor.color = "yellow"
+// console.log(userOneColor)
+// console.log(userTwoColor)
