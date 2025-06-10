@@ -2,7 +2,7 @@
 // true, 1, "0","false", " ", number, string, [], {}, function(){} 
 
 // falsey value - 
-// false, 0, -0, 0n, "", null, undefined, NaN
+// false, 0, -0, BigInt: 0n, "", null, undefined, NaN
 
 
 // const userEmail = "starfall@foo.bar";
@@ -12,7 +12,7 @@
 // } else {
 //   console.log(`Don't have user email`);
 // }
-// ------------------------------
+
 
 // const arr = []
 // if (arr.length === 0) {
@@ -22,7 +22,6 @@
 // if (Object.keys(obj).length === 0) {
 //   console.log(`empty object`)
 // }
-// ------------------------------
 
 
 // Nullish Coalescing Operator (??) null, undefined
@@ -34,8 +33,3 @@ val1 = undefined ?? null;
 val1 = null ?? undefined;
 val1 = null ?? undefined ?? null;
 console.log(val1)
-
-// ternary operator 
-// condition ? true : false;
-const iceTeaPrice = 100;
-iceTeaPrice <= 80 ? console.log('buy') : console.log(`don't buy`);

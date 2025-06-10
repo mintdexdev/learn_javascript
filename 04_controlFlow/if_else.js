@@ -1,12 +1,14 @@
-// <, >, <=, >=, ==, ===
-// &&, || , !
-// if
+/* Comparison or Relational
+<, >, <=, >=, ==, ===
+&&, || , !
+*/
+
+/* if */
 
 const isLoggedIn = true;
 // if (isLoggedIn) {
 //   console.log("executed")
 // }
-// ------------------------------
 
 // else 
 const temp = 30;
@@ -15,9 +17,9 @@ const temp = 30;
 // } else {
 //   console.log("temperature greater than 40");
 // }
-// ------------------------------
 
-// has scope : here: explicit
+
+/* has scope : here: explicit */
 const score = 3420;
 // if (score > 100) {
 //   const power = "fly";
@@ -49,3 +51,8 @@ const emailLoggedIn = true;
 // if (googleLoggedIn || emailLoggedIn) {
 //   console.log(`allow to enter website`);
 // }
+
+// ternary operator 
+// condition ? true : false;
+const iceTeaPrice = 100;
+iceTeaPrice <= 80 ? console.log('buy') : console.log(`don't buy`);

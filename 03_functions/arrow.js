@@ -1,24 +1,20 @@
-'use strict';
 // 'this'
 // refers to the object that calls the function.
-// only work with regular function not with arrow function.
-// regular functions: it is dynamic — it depends on how the function is called.
-// arrow function: it is lexically bound - inherits 'this' from the  parent scope.
+// regular: 'this' depends on how the function is called.
+// arrow: 'this' is lexically bound - inherits 'this' from the  parent scope.
 
 // brower scope - undefined - window object
 // node scope - {}empty
-// 'use strict';
-
 
 const user = {
-  username: "starfall",
+  username: "starfalldex",
   price: 999,
   welcomeMessage: function () {
     console.log(`${this.username}, Welcome`)
     console.log(this)
   },
   otherInfo: {
-    fullName: "starfall dex",
+    fullName: "stellar frost",
     farewellMessage: function () {
       console.log(`${this.fullName}, Goodbye`)
       console.log(this)
@@ -29,9 +25,9 @@ const user = {
 // user.username = "foo";
 // user.welcomeMessage();
 // user.data.farewellMessage()
-// ------------------------------
+
 function regularFunction() {
-  let username = "foo";
+  let username = "starfaldex";
   console.log("regular function")
   console.log(this)
 }
@@ -42,18 +38,12 @@ const arrowFunction = () => {
   console.log(this)
 }
 // arrowFunction();
-// ------------------------------
 
-// const addTwo = (num1, num2) => {
-//   return num1 + num2
-// }
+const addTwo = (num1, num2) => {
+  return num1 + num2
+}
 // const addTwo = (num1, num2) => num1 + num2;
 // const addTwo = (num1, num2) => (num1 + num2);
-const addTwo = (num1, num2) => ({ username: "starfall" });
+// const addTwo = (num1, num2) => ({ username: "starfalldex" });
 
-// console.log(addTwo(4, 6));
-
-// ------------------------------extra
-// console.log(this)
-// console.log(global)
-// console.log(module)
+console.log(addTwo(4, 6));

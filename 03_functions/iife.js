@@ -1,6 +1,6 @@
 // Immediately Invoked Function Expression (IIFE)
 
-// syntax: (function define)(execution);
+// syntax: (function define)(execution: argument);
 // executed immediately and isolate variables from the global scope pollution
 // always use ';'
 
@@ -9,8 +9,8 @@
   console.log("1: color shown");
 })();
 
-// Anonymous iife
-((name) => { console.log(`2: ${name} connected`) })(`starfall`);
+// Anonymous arrow iife
+((name) => console.log(`2: ${name} connected`))(`starfall`);
 
 const hello = ((name) => (`3: hello color `))();
-console.log(hello)
+console.log(hello);

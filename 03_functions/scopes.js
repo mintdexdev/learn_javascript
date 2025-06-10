@@ -9,10 +9,9 @@ if (true) {
 // console.log("Outer: ", a);
 // console.log(b);
 // console.log(c);
-// ------------------------------
 
 function one() {
-  const username = "starfall";
+  const username = "stellar";
 
   function two() {
     const website = "foo";
@@ -24,23 +23,28 @@ function one() {
 // one();
 
 if (true) {
-  const username = "starfall";
-  if (username === "starfall") {
+  const username = "stellar";
+  if (username === "stellar") {
     const website = "youtube";
-    console.log(username + website);
+    // console.log(username + website);
   }
   // console.log(website); // won't work
 }
 // console.log(username); // won't work
 
-// ------------------------------Interesting
+
+/* Interesting */
 // console.log(addOne(2))
 function addOne(num) {
-  return num++;
+  return num + 1;
 }
 
+/* aslo known as expression */
 // console.log(addTwo(4))  // can't access before initialization of expression
-// aslo known as expression
 const addTwo = function (num) {
   return num + 2;
 }
+
+// console.log(global)
+// console.log(module)
+// console.log(this, module.exports)
