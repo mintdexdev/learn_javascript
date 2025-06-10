@@ -1,5 +1,7 @@
-// for
-// of, in
+/* for
+of, in
+entry control loop
+ */
 
 // for (let i = 0; i < 10; i++) {
 //   const element = i;
@@ -16,32 +18,31 @@
 //     console.log(`${i} * ${j} = ${i * j}`)
 //   }  
 // }
-// ------------------------------
 
 // let colors = ["crimson", "red", "silver"]
 // for (let i = 0; i < colors.length; i++) {
 //   const element = colors[i];
 //   console.log(element)
 // }
-// ------------------------------
-
-// break and continue
-for (let i = 1; i <= 20; i++) {
-  if (i == 5) {
-    console.log(`${i} skipped`)
-    continue;
-  }
-  if (i == 7) {
-    console.log(`loop break at ${i}`);
-    break;
-  }
-  console.log(i)
-}
-// ------------------------------------------------------------
 
 
-// while
-// entry control loop
+/* break and continue */
+// for (let i = 1; i <= 20; i++) {
+//   if (i == 5) {
+//     console.log(`${i} skipped`)
+//     continue;
+//   }
+//   if (i == 7) {
+//     console.log(`loop break at ${i}`);
+//     break;
+//   }
+//   console.log(i)
+// }
+
+
+
+/* while
+entry control loop */
 
 // let i = 2
 // while (i <= 5) {
@@ -57,9 +58,9 @@ for (let i = 1; i <= 20; i++) {
 // }
 
 
-// ------------------------------
-// do-while
-// exit control loop
+/* 
+do-while
+exit control loop */
 
 let score = 1;
 // let score = 12;

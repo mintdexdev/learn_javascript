@@ -1,14 +1,15 @@
+/* FOREACH */
 const colors = ["red", "yellow", "silver", "gold", "black", "crimson"];
 
-// color.forEach(function (element, index, arrList) { });
+/* array.forEach(function (element, index, arrayList) { }); */
 // colors.forEach(function (color, i) { console.log(color, i) });
 // colors.forEach((color, i) => console.log(color, i));
 
+// colors.forEach((item, index, arr) => console.log(item, index, arr));
+// colors.forEach(printme)
 // function printme(item) {
 //   console.log(item);
 // }
-// colors.forEach(printme)
-// colors.forEach((item, index, arr) => console.log(item, index, arr));
 
 const languageDetails = [
   {
@@ -24,35 +25,34 @@ const languageDetails = [
   },
 ]
 
-languageDetails.forEach((item) => {
-  console.log(item.name)
-  console.log(item.extension)
-})
-// ------------------------------------------------------------
+// languageDetails.forEach((item) => {
+//   console.log(`${item.name}: ${item.extension}`)
+// })
 
-// FILTER
 
-// won't work
+/* FILTER */
+
+/* won't work: forEach does not return anything */
 // const values = colors.forEach((item) => {
 //   // console.log(item)
 //   return item;
 // })
 // console.log(values)
-// ------------------------------
+
 
 const nums = [3, 6, 2, 7, 1, 5, 4, 9, 8, 10]
 
 // const newNums = [];
 // nums.forEach((n) => {
-//   if (n > 4) {
+//   if (n > 5) {
 //     newNums.push(n);
 //   }
 // })
 
 // or
-// const newNums = nums.filter((n) => n > 5);
-// console.log(newNums);
-// ------------------------------
+const newNums = nums.filter((n) => n > 5);
+console.log(newNums);
+
 
 const books = [
   { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
@@ -67,7 +67,6 @@ const books = [
 ];
 
 let userBooks = books.filter((bk) => bk.genre === 'History');
-
 userBooks = books.filter((bk) => {
   return bk.publish >= 1995 && bk.genre === "History";
 })
