@@ -6,6 +6,10 @@ class User {
     this.email = email;
     this.password = password;
   }
+
+  /* can use and name inside get set function used _ to increase readability.
+  create a new property with '_' temorarily and set to the original property. */
+
   get email() {
     return this._email.toUpperCase();
   }
@@ -52,29 +56,32 @@ Old Way: used rarely around 5%-10%  */
 /* OUTPUT */
 const star = new User("star@user.bar", "pass");
 console.log(star);
-console.log(star._email, star._password);
-console.log(star.email, star.password);
+star.email = "mint@foo.bar"
+star._password = "fresh"
+console.log(star);
+console.log(star._email, star._password);  // original value
+console.log(star.email, star.password); // comes through get set fun
 
 
 /* super rare
 Obejct based getset by define property */
 
-const User = {
-  _email: 'star@user.bar',
-  _password: 'pass',
-  get email() {
-    return this._email.toUpperCase()
-  },
-  set email(value) {
-    this._email = value
-  },
-  get password() {
-    return this._password.toUpperCase()
-  },
-  set password(value) {
-    this._password = value
-  }
-}
+// const User = {
+//   _email: 'star@user.bar',
+//   _password: 'pass',
+//   get email() {
+//     return this._email.toUpperCase()
+//   },
+//   set email(value) {
+//     this._email = value
+//   },
+//   get password() {
+//     return this._password.toUpperCase()
+//   },
+//   set password(value) {
+//     this._password = value
+//   }
+// }
 
 /* OUTPUT */
 // const fall = Object.create(User);

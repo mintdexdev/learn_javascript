@@ -35,7 +35,7 @@
       const password = "Not used";  // not used is closure
 
       function displayDetails() {
-        console.log(name,email); // only 'name, email' is used
+        console.log(name, email); // only 'name, email' is used
       }
 
       return displayDetails;
@@ -75,29 +75,36 @@
     // }
 
 
-    // function clickHandler(color){
-    // // document.body.style.backgroundColor = `${color}`
-    //   return function(){
-    //     document.body.style.backgroundColor = `${color}`
-    //   }
-    // }
-    // document.getElementById('orange').onclick = clickHandler("orange");
-    // document.getElementById('green').onclick = clickHandler("green");
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}`
+      return function () {
+        document.body.style.backgroundColor = `${color}`
+      }
+    }
+    document.getElementById('orange').onclick = clickHandler("orange");
+    document.getElementById('green').onclick = clickHandler("green");
 
 
     /* created button using array */
     /* arrow function just like in react */
-    // ["blue","red"].forEach((color) => {
-    //   const button = document.createElement('button');
-    //   button.setAttribute("id",`${color}`)
-    //   button.appendChild(document.createTextNode(`${color}`))
-    //   document.getElementById('green').insertAdjacentElement("afterend",button)
+    ["blue", "red"].forEach((color) => {
+      const button = document.createElement('button');
+      button.setAttribute("id", `${color}`)
+      button.appendChild(document.createTextNode(`${color}`))
+      document.getElementById('green').insertAdjacentElement("afterend", button)
 
-    //   document.getElementById(`${color}`).addEventListener('click', () =>{
-    //     document.body.style.backgroundColor = `${color}`
-    //   }
-    //   )
-    // })
+      // document.getElementById(`${color}`).addEventListener('click',
+      //   clickHandler(color)
+      // )
+
+      document.getElementById(`${color}`).addEventListener('click', () => {
+        document.body.style.backgroundColor = `${color}`
+      })
+
+      // not recommended
+      // document.getElementById(`${color}`).onclick = () =>
+      //   document.body.style.backgroundColor = `${color}`
+    })
   </script>
 </body>
 
