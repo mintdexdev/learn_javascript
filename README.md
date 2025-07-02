@@ -2,6 +2,8 @@
 learning JavaScript from chai aur code
 
 ## Projects
+Project Preview [here](https://mintdexdev.github.io/learn_javascript/)
+,done 6 projects
 
-All projects are available here in a special sandbox - stackblitz.
-[Projects](https://stackblitz.com/edit/dom-project-chaiaurcode-nxvetp1u?file=index.html)
+All the original copy of code is provided by "Chai aur code" in sandbox of stackblitz
+[here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)

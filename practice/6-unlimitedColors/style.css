@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #ffffff31;
+  color: rgba(255, 255, 255, 0.884);
+  margin: 12px;
+  padding: 1rem;
+  padding-top: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.226);
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
