@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #121212;
+  color: #ededed;
+}
+
+header {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 100%, 0.02);
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: right;
+  color: hsla(0, 0%, 100%, 0.62);
+}
+
+a {
+  text-decoration: none;
+  color: #ffffffde;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.project-link {
+  background-color: hsla(0, 0%, 100%, 0.02);
+  padding: 0.75rem 0;
+  padding-left: 35%;
+  border: solid 1px hsla(0, 0%, 100%, 0.2);
+  border-radius: 8px;
+}
+
+footer a {
+  background-color: hsla(0, 0%, 100%, 0.04);
+  display: inline-block;
+  padding: 0.8rem;
+  padding-top: 0.7rem;
+  text-align: center;
+  border: solid 1px hsla(0, 0%, 100%, 0.2);
+  border-radius: 8px;
+}
+
+@media (max-width: 500px) {
+  footer {
+    position: relative;
+  }
+
+  .project-link {
+    padding: 0.75rem 1rem;
+  }
+}
